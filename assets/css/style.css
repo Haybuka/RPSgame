@@ -121,6 +121,10 @@
     .img-close {
       cursor: pointer;
     }
+    .game--display p{
+   color: #fff;
+   text-align: center;
+    }
 
     @media screen and (max-width: 400px) {
       .rules {
