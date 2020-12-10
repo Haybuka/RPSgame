@@ -36,7 +36,9 @@
       border: 2px solid #fff;
       border-radius: 10px;
       width: 400px;
-      margin: 20px auto;
+      left: 50%;
+        transform: translateX(-50%);
+        position: relative;
 }
 .header--score{
     background-color: hsla(0, 0%, 100%, 0.938);
