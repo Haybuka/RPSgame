@@ -39,7 +39,7 @@
       padding: 30px 10px;
       border: 2px solid #fff;
       border-radius: 10px;
-      width: 400px;
+      width: 100%;
       left: 50%;
         transform: translateX(-50%);
         position: relative;
