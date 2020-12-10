@@ -1,0 +1,118 @@
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      display: none;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: red;
+    }
+
+    .rules::after {
+      content: ' ';
+      background-color: hsla(0, 0%, 100%, 0.938);
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 10px;
+      transition: all 1s ease-out;
+      z-index: -1;
+    }
+
+    .rules:active::after {
+      transform: scaleX(1.5);
+      opacity: 0;
+    }
+
+    .rules {
+      position: absolute;
+      width: 350px;
+      height: auto;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: hsla(0, 0%, 100%, 0.938);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      transition: all 2s ease-out;
+      z-index: 10;
+      display: grid;
+      grid-template-columns: repeat(2, 6fr);
+      grid-template-rows: repeat(2, minmax(0, auto));
+      align-items: center;
+      justify-content: center;
+    }
+
+    .rules.close {
+      opacity: 0;
+      transform: translate(-60%, -1000%) rotate(360deg);
+    }
+
+    .rules-tag {
+      grid-column: 1/6;
+      grid-row: 1/2;
+      text-align: left;
+    }
+
+    .img-close {
+      grid-column: 6/13;
+      grid-row: 1/2;
+    }
+
+    .rules-img {
+      margin-top: 15px;
+      grid-column: 1/13;
+      grid-row: 2/3;
+      left: 50%;
+      transform: translateX(-50%);
+      position: relative;
+    }
+
+
+
+    .img-close {
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 400px) {
+      .rules {
+        height: 80vh;
+        margin-top: 20px;
+      }
+
+      .rules-tag {
+        grid-column: 1/6;
+        grid-row: 1/2;
+        text-align: left;
+        text-align: center;
+      }
+
+      .img-close {
+        grid-column: 1/13;
+        grid-row: 3/4;
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative;
+        margin-top: 20px;
+      }
+
+      .rules-img {
+
+        grid-column: 1/13;
+        grid-row: 2/3;
+      }
+    }
+ 
