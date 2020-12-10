@@ -14,9 +14,44 @@
     }
 
     body {
-      background: red;
+      background: radial-gradient(circle,hsl(214, 47%, 23%),hsl(237, 49%, 15%));
     }
-
+    :root{
+        --score-color:hsl(229, 64%, 46%);
+        --dark-text: hsl(229, 25%, 31%);
+        --header-out:  hsl(217, 16%, 45%);
+        --game-bkg:  hsl(214, 47%, 23%) to hsl(237, 49%, 15%);
+    }
+    main{
+        width: 500px;
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative;
+    }
+.header{
+     display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 10px;
+      border: 2px solid #fff;
+      border-radius: 10px;
+      width: 400px;
+}
+.header--score{
+    background-color: hsla(0, 0%, 100%, 0.938);
+    padding: 5px 50px;
+    border-radius: 10px;
+    text-align: center;
+}
+.header--score p{
+    margin-bottom: 0;
+    color: var(--score-color);
+}
+.header--score h2{
+    margin-top: 5px;
+    color: var(--dark-text);
+    font-size: 30px;
+}
     .rules::after {
       content: ' ';
       background-color: hsla(0, 0%, 100%, 0.938);
