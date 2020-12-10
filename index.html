@@ -24,6 +24,14 @@
       color: hsl(228, 45%, 44%);
     }
 
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: red;
+    }
+
     .rules::after {
       content: ' ';
       background-color: hsla(0, 0%, 100%, 0.938);
@@ -44,8 +52,9 @@
     }
 
     .rules {
-      width: 400px;
       position: absolute;
+      width: 350px;
+      height: auto;
       top: 40%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -55,29 +64,71 @@
       text-align: center;
       transition: all 2s ease-out;
       z-index: 10;
-    }
-
-
-
-    .rules-info {
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: repeat(2, 6fr);
+      grid-template-rows: repeat(2, minmax(0, auto));
       align-items: center;
-    }
-
-    .rules-info+img {}
-
-    body {
-      background: red;
-    }
-
-    .rules-info img {
-      cursor: pointer;
+      justify-content: center;
     }
 
     .rules.close {
       opacity: 0;
       transform: translate(-60%, -1000%) rotate(360deg);
+    }
+
+    .rules-tag {
+      grid-column: 1/6;
+      grid-row: 1/2;
+      text-align: left;
+    }
+
+    .img-close {
+      grid-column: 6/13;
+      grid-row: 1/2;
+    }
+
+    .rules-img {
+      margin-top: 15px;
+      grid-column: 1/13;
+      grid-row: 2/3;
+      left: 50%;
+      transform: translateX(-50%);
+      position: relative;
+    }
+
+
+
+    .img-close {
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 400px) {
+      .rules {
+        height: 80vh;
+        margin-top: 20px;
+      }
+
+      .rules-tag {
+        grid-column: 1/6;
+        grid-row: 1/2;
+        text-align: left;
+        text-align: center;
+      }
+
+      .img-close {
+        grid-column: 1/13;
+        grid-row: 3/4;
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative;
+        margin-top: 20px;
+      }
+
+      .rules-img {
+
+        grid-column: 1/13;
+        grid-row: 2/3;
+      }
     }
   </style>
 </head>
@@ -86,11 +137,12 @@
 
   Score
   <div class="rules">
-    <div class="rules-info">
-      <h3>Rules </h3>
-      <img src="images/icon-close.svg" alt="" id="img-close">
-    </div>
-    <img src="images/image-rules.svg" alt="">
+
+    <h3 class="rules-tag">Rules </h3>
+    <img src="images/icon-close.svg" alt="" class="img-close">
+
+    <img src="images/image-rules.svg" alt="" class="rules-img">
+
   </div>
   You Picked
   The House Picked
@@ -106,7 +158,7 @@
   </div>
   <script>
     let rules = document.querySelector('.rules')
-    let closeRules = document.querySelector('#img-close');
+    let closeRules = document.querySelector('.img-close');
     closeRules.addEventListener('click', () => {
       rules.classList.add('close');
     })
