@@ -36,6 +36,7 @@
       border: 2px solid #fff;
       border-radius: 10px;
       width: 400px;
+      margin: 20px auto;
 }
 .header--score{
     background-color: hsla(0, 0%, 100%, 0.938);
