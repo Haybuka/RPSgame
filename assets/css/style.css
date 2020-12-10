@@ -31,6 +31,7 @@
         left: 50%;
         transform: translateX(-50%);
         position: relative;
+        padding: 10px;
     }
 .header{
      display: flex;
