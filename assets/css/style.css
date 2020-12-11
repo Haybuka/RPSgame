@@ -14,7 +14,6 @@
     }
 
     body {
-        padding: 10px;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -42,7 +41,7 @@
      display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 30px 10px;
+      padding: 10px;
       border: 2px solid #fff;
       border-radius: 10px;
       width: 100%;
@@ -141,17 +140,60 @@
     }
 .game--display {
   position: relative;
+  margin-top: 30px;
+
+}
+.game--pick.hidden{
+   opacity: 0;
+   z-index: -2;
+   display: none;
+}
+.game--decide{
+  /* opacity: 0;
+   z-index: -2; */
+   justify-content: space-between;
+   align-items: center;
+   top: 0;
+   left: 0;
+   position: absolute;
+   width: 100%;
+}
+.pick{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pick p{
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+.game--compare{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.game--decide.show{
+
 }
 .game--pick{
+  display: block;
   background-image: url('/assets/images/bg-triangle.svg');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  z-index: 1;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
   display: grid;
   grid-template-columns: repeat(12,1fr);
   grid-template-rows: repeat(2,minmax(30px,auto));
   justify-content: space-between;
   align-items: center;
+  top: 0;
+  left: 0;
+  position: absolute;
 }
 .paper{
   /* background: linear-gradient(hsl(230, 89%, 62%) ,hsl(230, 89%, 65%)); */
@@ -166,6 +208,7 @@
   border: 10px solid  var(--paper-color);
   background-color: var(--white-bkg);
   box-shadow: 1px 3px 3px var(--game-shadow);
+  cursor:pointer;
 }
 .scissors{
   /* background: linear-gradient(hsl(39, 89%, 49%) , hsl(40, 84%, 53%)); */
@@ -180,6 +223,7 @@
   border: 10px solid var(--scissors-color);
   background-color: var(--white-bkg);
   box-shadow: 1px 3px 3px var(--game-shadow);
+  cursor:pointer;
 }
 .rock{
   /* background: linear-gradient(hsl(349, 71%, 52%) , hsl(349, 70%, 56%)); */
@@ -196,6 +240,7 @@
   border: 10px solid  var(--rock-color);
   background-color: var(--white-bkg);
   box-shadow: 1px 3px 3px var(--game-shadow);
+  cursor:pointer;
 }
     @media screen and (max-width: 400px) {
       .rules {

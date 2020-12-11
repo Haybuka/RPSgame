@@ -19,14 +19,14 @@
 <body>
 
 
-  <div class="rules">
+  <!-- <div class="rules">
 
     <h3 class="rules-tag">Rules </h3>
     <img src="assets/images/icon-close.svg" alt="close" class="img-close">
 
     <img src="assets/images/image-rules.svg" alt="rules" class="rules-img">
 
-  </div>
+  </div> -->
   <main>
     <section class="header">
       <div class="header--logo">
@@ -39,16 +39,13 @@
     </section>
 
     <section class="game--display">
-      <!-- You Picked
-    The House Picked
+      <!-- 
 
     You Win
     You Lose
 
     Play Again -->
-
-      <p>still Loading</p>
-      <div class="game--pick">
+      <div class="game--pick hidden">
         <div class="paper">
           <img src="assets/images/icon-paper.svg" alt="" class="paper--img">
         </div>
@@ -58,7 +55,20 @@
         <div class="rock">
           <img src="assets/images/icon-rock.svg" alt="" class="rock--img">
         </div>
-
+      </div>
+      <div class="game--decide">
+        <div class="pick">
+          <p>You Picked</p>
+          <p>The House Picked</p>
+        </div>
+        <div class="game--compare">
+          <div>
+            <img src="assets/images/icon-paper.svg" alt="" class="paper--img">
+          </div>
+          <div>
+            <img src="assets/images/icon-rock.svg" alt="" class="rock--img">
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -69,8 +79,12 @@
     Coded by <a href="#">Ndulue Paschal</a>.
   </div>
   <script>
-    let rules = document.querySelector('.rules')
+    let rules = document.querySelector('.rules');
+    let hideGamePick = document.querySelector('.game--pick');
     let closeRules = document.querySelector('.img-close');
+    hideGamePick.addEventListener('click', function () {
+      this.classList.add('hidden')
+    })
     closeRules.addEventListener('click', () => {
       rules.classList.add('close');
     })
