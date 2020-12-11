@@ -147,11 +147,18 @@
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: repeat(2,minmax(30px,auto));
+  justify-content: space-between;
+  align-items: center;
 }
 .paper{
   background: linear-gradient(hsl(230, 89%, 62%) ,hsl(230, 89%, 65%));
   border-radius: 50px;
+  grid-column: 1/4;
+  grid-row: 1/2;
+  transform:translate(30px,-20px);
 }
 .paper--img{
   border-radius: 50px;
@@ -163,6 +170,9 @@
 .scissors{
   background: linear-gradient(hsl(39, 89%, 49%) , hsl(40, 84%, 53%));
   border-radius: 50px;
+  grid-column: 10/13;
+  grid-row: 1/2;
+  transform: translate(-70px,-20px);
 }
 .scissors--img{
   border-radius: 50px;
@@ -174,10 +184,15 @@
 .rock{
   background: linear-gradient(hsl(349, 71%, 52%) , hsl(349, 70%, 56%));
   border-radius: 50px;
+  grid-column: 6/7;
+  grid-row: 2/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .rock--img{
   border-radius: 50px;
-  padding: 20px;
+  padding: 18px 20px;
   border: 10px solid  var(--rock-color);
   background-color: var(--white-bkg);
   box-shadow: 1px 3px 3px var(--game-shadow);
