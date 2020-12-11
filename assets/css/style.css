@@ -25,7 +25,8 @@
         --dark-text: hsl(229, 25%, 31%);
         --header-out:  hsl(217, 16%, 45%);
         --game-bkg:  hsl(214, 47%, 23%) to hsl(237, 49%, 15%);
-    }
+         --game-shadow:hsla(228.6, 19.6%, 21%, 0.58);
+      }
     main{
         width: 400px;
         left: 50%;
@@ -45,6 +46,7 @@
         transform: translateX(-50%);
         position: relative;
 }
+
 .header--score{
     background-color: hsla(0, 0%, 100%, 0.938);
     padding: 5px 50px;
@@ -133,6 +135,28 @@
    color: #fff;
    text-align: center;
     }
+.game--display {
+  position: relative;
+}
+.game--pick{
+  background-image: url('/assets/images/bg-triangle.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+}
+.paper{
+  background: linear-gradient(hsl(39, 89%, 49%) , hsl(40, 84%, 53%));
+  border-radius: 50px;
+}
+.paper--img{
+  border-radius: 50px;
+  padding: 15px 20px;
+  border-style: inset;
+  border: 10px solid  hsl(39, 89%, 49%);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 3px 3px var(--game-shadow);
+}
 
     @media screen and (max-width: 400px) {
       .rules {
