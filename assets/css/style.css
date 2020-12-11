@@ -26,7 +26,11 @@
         --header-out:  hsl(217, 16%, 45%);
         --game-bkg:  hsl(214, 47%, 23%) to hsl(237, 49%, 15%);
          --game-shadow:hsla(228.6, 19.6%, 21%, 0.58);
-      }
+         --paper-color:hsl(230, 89%, 62%);
+         --rock-color: hsl(349, 71%, 52%);
+         --scissors-color:hsl(39, 89%, 49%);
+         --white-bkg:hsl(0, 0%, 100%);
+        }
     main{
         width: 400px;
         left: 50%;
@@ -146,18 +150,38 @@
   display: flex;
 }
 .paper{
-  background: linear-gradient(hsl(39, 89%, 49%) , hsl(40, 84%, 53%));
+  background: linear-gradient(hsl(230, 89%, 62%) ,hsl(230, 89%, 65%));
   border-radius: 50px;
 }
 .paper--img{
   border-radius: 50px;
   padding: 15px 20px;
-  border-style: inset;
-  border: 10px solid  hsl(39, 89%, 49%);
-  background-color: rgb(255, 255, 255);
+  border: 10px solid  var(--paper-color);
+  background-color: var(--white-bkg);
   box-shadow: 1px 3px 3px var(--game-shadow);
 }
-
+.scissors{
+  background: linear-gradient(hsl(39, 89%, 49%) , hsl(40, 84%, 53%));
+  border-radius: 50px;
+}
+.scissors--img{
+  border-radius: 50px;
+  padding: 15px 20px;
+  border: 10px solid var(--scissors-color);
+  background-color: var(--white-bkg);
+  box-shadow: 1px 3px 3px var(--game-shadow);
+}
+.rock{
+  background: linear-gradient(hsl(349, 71%, 52%) , hsl(349, 70%, 56%));
+  border-radius: 50px;
+}
+.rock--img{
+  border-radius: 50px;
+  padding: 20px;
+  border: 10px solid  var(--rock-color);
+  background-color: var(--white-bkg);
+  box-shadow: 1px 3px 3px var(--game-shadow);
+}
     @media screen and (max-width: 400px) {
       .rules {
         height: 70vh;
