@@ -19,6 +19,8 @@
   5.0 javaScript Toggle Classes
   6.0 Media Rules
   7.0 Frontend Mentor Attribution
+
+<========                    ====================>
 */
 
 
@@ -39,12 +41,14 @@ body {
         --score-color:hsl(229, 64%, 46%);
         --dark-text: hsl(229, 25%, 31%);
         --header-out:  hsl(217, 16%, 45%);
-        --game-bkg:  hsl(214, 47%, 23%) to hsl(237, 49%, 15%);
          --game-shadow:hsla(228.6, 19.6%, 21%, 0.58);
          --paper-color:hsl(230, 89%, 62%);
          --rock-color: hsl(349, 71%, 52%);
          --scissors-color:hsl(39, 89%, 49%);
          --white-bkg:hsl(0, 0%, 100%);
+         --game-lose:hsl(349, 71%, 52%);
+        --game-win:  hsl(214, 47%, 23%);
+        --dark-shadow:hsla(0, 0%, 0%, 0.432);
 }
 
 /*<===  RULES SECTION ===>*/
@@ -55,11 +59,11 @@ body {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: hsla(0, 0%, 100%, 0.938);
+  background-color:var(--white-bkg);
   padding: 20px;
   border-radius: 10px;
   text-align: center;
-  transition: all 2s ease-out;
+  transition: all 1s ease-out;
   z-index: 10;
   display: grid;
   grid-template-columns: repeat(2, 6fr);
@@ -87,7 +91,7 @@ body {
 }
 .rules.close {
   opacity: 0;
-  transform: translate(-60%, -1000%) rotate(360deg);
+  transform: translate(-60%, -200%) rotate(270deg);
 }
 
 .img-close {
@@ -96,7 +100,7 @@ body {
 }
 .rules::after {
       content: ' ';
-      background-color: hsla(0, 0%, 100%, 0.938);
+      background-color:var(--white-bkg);
       display: block;
       width: 100%;
       height: 100%;
@@ -104,7 +108,7 @@ body {
       top: 0;
       left: 0;
       border-radius: 10px;
-      transition: all 1s ease-out;
+      transition: all 0.6s ease-out;
       z-index: -1;
 }
 
@@ -128,7 +132,7 @@ main{
    justify-content: space-between;
    align-items: center;
    padding: 10px;
-   border: 2px solid #fff;
+   border: 2px solid var(--white-bkg);
    border-radius: 10px;
    width: 100%;
    left: 50%;
@@ -137,7 +141,7 @@ main{
 }
 
 .header--score{
- background-color: hsla(0, 0%, 100%, 0.938);
+ background-color: var(--white-bkg);
  padding: 5px 50px;
  border-radius: 10px;
  text-align: center;
@@ -162,7 +166,7 @@ main{
   }
 
   .game--display p{
-    color: #fff;
+    color: var(--white-bkg);
     text-align: center;
   }
 
@@ -274,6 +278,7 @@ main{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 15px;
 }
 
 /* Game Compare Classes */
@@ -289,15 +294,16 @@ main{
   cursor: pointer;
   margin: 0;
   padding: 10px 30px;
-  background-color: #fff;
+  background-color: var(--white-bkg);
   border-radius: 10px;
   position: relative;
+  box-shadow: 2px 4px 3px var(--dark-shadow);
 }
 
 
 .button::after{
   content: ' ';
-      background-color: hsla(0, 0%, 98%, 0.938);
+      background-color: var(--white-bkg);
       display: inline;
       width: 100%;
       height: 100%;
@@ -315,19 +321,34 @@ main{
 
 /* Js - Toggle Classes */
 .button.win{
-  color: var(--game-bkg);
-}
-.button.win{
-  color: var(--game-bkg);
+  color: var(--game-win);
 }
 
+.button.lose{
+  color: var(--game-lose);
+}
 
 .hidden{
   opacity: 0;
   z-index: -2;
   display: none !important;
 }
-
+.rule--button{
+  position: absolute;
+  transform: translate(1000px,350px);
+}
+.rule--button p{
+  cursor: pointer;
+  margin: 0;
+  padding: 10px 30px;
+  border: 2px solid var(--white-bkg);
+  color:var(--white-bkg);
+  background-color: transparent;
+  text-transform: uppercase;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 2px 4px 3px var(--dark-shadow);
+}
 /* Media Rules and Responsiveness */
     @media screen and (max-width: 400px) {
       .rules {
@@ -356,6 +377,11 @@ main{
         grid-column: 1/13;
         grid-row: 2/3;
       }
+      .rule--button{
+        display: grid;
+  justify-content: center;
+  align-self: start;
+      }
     }
  
 
@@ -367,5 +393,5 @@ main{
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color:var(--white-bkg);
 }

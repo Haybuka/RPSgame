@@ -18,7 +18,7 @@
 
 <body>
 
-
+  <!-- rules postioned Absolutely,Js Triggered -->
   <div class="rules">
 
     <h3 class="rules-tag">Rules </h3>
@@ -27,7 +27,11 @@
     <img src="assets/images/image-rules.svg" alt="rules" class="rules-img">
 
   </div>
+
+  <!-- Main Section Begins here -->
   <main>
+
+    <!-- Header begins here for logo,and Count -->
     <section class="header">
       <div class="header--logo">
         <img src="assets/images/logo.svg" alt="logo">
@@ -37,7 +41,9 @@
         <h2>12</h2>
       </div>
     </section>
+    <!-- Game Body Starts Here,Positioned Relatively -->
     <section class="game--display">
+      <!-- Game Picker for Selection,Position absolute to Game Body -->
       <div class="game--pick">
         <div class="paper">
           <img src="assets/images/icon-paper.svg" alt="" class="paper--img">
@@ -49,6 +55,7 @@
           <img src="assets/images/icon-rock.svg" alt="" class="rock--img">
         </div>
       </div>
+      <!-- Game Decider,Position absolute to Game Body -->
       <div class="game--decide hidden">
         <div class="pick">
           <p>You Picked</p>
@@ -68,8 +75,11 @@
         </div>
       </div>
     </section>
-  </main>
 
+  </main>
+  <aside class="rule--button">
+    <p>Rules </p>
+  </aside>
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
@@ -77,10 +87,12 @@
   </div>
   <script>
     let rules = document.querySelector('.rules');
+    let openRules = document.querySelector('.rule--button');
     let playButton = document.querySelector('.button');
     let hideGamePick = document.querySelector('.game--pick');
     let closeRules = document.querySelector('.img-close');
     let gameDecide = document.querySelector('.game--decide');
+
 
     hideGamePick.addEventListener('click', function () {
       this.classList.add('hidden');
@@ -88,6 +100,9 @@
     })
     closeRules.addEventListener('click', () => {
       rules.classList.add('close');
+    })
+    openRules.addEventListener('click', () => {
+      rules.classList.remove('close');
     })
     playButton.addEventListener('click', function () {
       hideGamePick.classList.remove('hidden')
