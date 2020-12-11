@@ -85,30 +85,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Ndulue Paschal</a>.
   </div>
-  <script>
-    let rules = document.querySelector('.rules');
-    let openRules = document.querySelector('.rule--button');
-    let playButton = document.querySelector('.button');
-    let hideGamePick = document.querySelector('.game--pick');
-    let closeRules = document.querySelector('.img-close');
-    let gameDecide = document.querySelector('.game--decide');
-
-
-    hideGamePick.addEventListener('click', function () {
-      this.classList.add('hidden');
-      gameDecide.classList.remove('hidden')
-    })
-    closeRules.addEventListener('click', () => {
-      rules.classList.add('close');
-    })
-    openRules.addEventListener('click', () => {
-      rules.classList.remove('close');
-    })
-    playButton.addEventListener('click', function () {
-      hideGamePick.classList.remove('hidden')
-      gameDecide.classList.add('hidden')
-    })
-  </script>
+  <script src="assets/script/index.js"></script>
 </body>
 
 </html>
