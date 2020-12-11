@@ -143,14 +143,13 @@
   margin-top: 30px;
 
 }
-.game--pick.hidden{
+.hidden{
    opacity: 0;
    z-index: -2;
-   display: none;
+   display: none !important;
 }
 .game--decide{
-  /* opacity: 0;
-   z-index: -2; */
+   z-index: 2;
    justify-content: space-between;
    align-items: center;
    top: 0;
@@ -174,6 +173,45 @@
   justify-content: space-between;
   align-items: center;
 }
+.announce{
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: var(--white-bkg);
+}
+.button{
+  cursor: pointer;
+  margin: 0;
+  padding: 10px 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+}
+.button::after{
+  content: ' ';
+      background-color: hsla(0, 0%, 98%, 0.938);
+      display: inline;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 10px;
+      transition: all 0.5s ease-out;
+      z-index: -1;
+}
+.button:active::after{
+   transform: scaleX(1.2);
+   opacity: 0;
+}
+
+.button.win{
+  color: var(--game-bkg);
+}
+
+
 .game--decide.show{
 
 }

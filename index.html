@@ -19,14 +19,14 @@
 <body>
 
 
-  <!-- <div class="rules">
+  <div class="rules">
 
     <h3 class="rules-tag">Rules </h3>
     <img src="assets/images/icon-close.svg" alt="close" class="img-close">
 
     <img src="assets/images/image-rules.svg" alt="rules" class="rules-img">
 
-  </div> -->
+  </div>
   <main>
     <section class="header">
       <div class="header--logo">
@@ -41,11 +41,11 @@
     <section class="game--display">
       <!-- 
 
-    You Win
+   
     You Lose
 
     Play Again -->
-      <div class="game--pick hidden">
+      <div class="game--pick">
         <div class="paper">
           <img src="assets/images/icon-paper.svg" alt="" class="paper--img">
         </div>
@@ -56,7 +56,7 @@
           <img src="assets/images/icon-rock.svg" alt="" class="rock--img">
         </div>
       </div>
-      <div class="game--decide">
+      <div class="game--decide hidden">
         <div class="pick">
           <p>You Picked</p>
           <p>The House Picked</p>
@@ -64,6 +64,10 @@
         <div class="game--compare">
           <div>
             <img src="assets/images/icon-paper.svg" alt="" class="paper--img">
+          </div>
+          <div>
+            <h3 class="announce"> You Win</h3>
+            <p class="button win">Play Again</p>
           </div>
           <div>
             <img src="assets/images/icon-rock.svg" alt="" class="rock--img">
@@ -80,13 +84,21 @@
   </div>
   <script>
     let rules = document.querySelector('.rules');
+    let playButton = document.querySelector('.button');
     let hideGamePick = document.querySelector('.game--pick');
     let closeRules = document.querySelector('.img-close');
+    let gameDecide = document.querySelector('.game--decide');
+
     hideGamePick.addEventListener('click', function () {
-      this.classList.add('hidden')
+      this.classList.add('hidden');
+      gameDecide.classList.remove('hidden')
     })
     closeRules.addEventListener('click', () => {
       rules.classList.add('close');
+    })
+    playButton.addEventListener('click', function () {
+      hideGamePick.classList.remove('hidden')
+      gameDecide.classList.add('hidden')
     })
   </script>
 </body>
