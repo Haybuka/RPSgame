@@ -13,6 +13,8 @@
 
 //   iterating over game Item to determine choice
     gameItem.forEach( function(item){
+        var name;
+        var houseName;
        item.addEventListener('click',function(){
         //    removing and adding classes
           hideGamePick.classList.add('hidden');
@@ -20,16 +22,26 @@
 
         //   selecting user choice from array gameData
           for(let i=0;i<gameData.length; i++){
-            if(this.id == gameData[i].name){
+            name = this.id;
+            if(this.id == gameData[i].name){      
                 imgUser.setAttribute('src',gameData[i].img)
                 imgUser.setAttribute('class',gameData[i].class)
             }
         }
 
+        //Resetting House Chosen Image to blank
+        imageBlank()
+        
         //   House Choice using Random Number
-         let rand = randx()
-          imgHouse.setAttribute('src',gameData[`${rand}`].img)
-          imgHouse.setAttribute('class',gameData[`${rand}`].class)
+         
+          setTimeout(() => {
+            let rand = randx()
+            houseName = gameData[`${rand}`].name
+            imgHouse.setAttribute('src',gameData[`${rand}`].img)
+            imgHouse.setAttribute('class',gameData[`${rand}`].class)
+
+            decideWinner(name,houseName)
+          }, 2000);
       })
     
    })
@@ -72,4 +84,13 @@
 //Function to Pick Random Number 
     let randx = function pickHouse(){
         return Math.floor(Math.random()*gameData.length)
-                }
+    }
+//Function to reset blank
+    function imageBlank(){
+        imgHouse.setAttribute('class','house--blank')
+        imgHouse.setAttribute('src','assets/images/house.png')
+    }
+
+    function decideWinner(name,houseName){
+     console.log(name,houseName)
+    }

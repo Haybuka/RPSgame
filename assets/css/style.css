@@ -337,6 +337,9 @@ main{
   position: absolute;
   transform: translate(1000px,350px);
 }
+.house--blank{
+  border-radius: 50px ;
+}
 .rule--button p{
   cursor: pointer;
   margin: 0;
@@ -348,6 +351,10 @@ main{
   border-radius: 10px;
   position: relative;
   box-shadow: 2px 4px 3px var(--dark-shadow);
+  background-image: url('/assets/images/wave\(1\).svg');
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 /* Media Rules and Responsiveness */
     @media screen and (max-width: 400px) {
