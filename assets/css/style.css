@@ -154,7 +154,7 @@
   align-items: center;
 }
 .paper{
-  background: linear-gradient(hsl(230, 89%, 62%) ,hsl(230, 89%, 65%));
+  /* background: linear-gradient(hsl(230, 89%, 62%) ,hsl(230, 89%, 65%)); */
   border-radius: 50px;
   grid-column: 1/4;
   grid-row: 1/2;
@@ -168,7 +168,7 @@
   box-shadow: 1px 3px 3px var(--game-shadow);
 }
 .scissors{
-  background: linear-gradient(hsl(39, 89%, 49%) , hsl(40, 84%, 53%));
+  /* background: linear-gradient(hsl(39, 89%, 49%) , hsl(40, 84%, 53%)); */
   border-radius: 50px;
   grid-column: 10/13;
   grid-row: 1/2;
@@ -182,7 +182,7 @@
   box-shadow: 1px 3px 3px var(--game-shadow);
 }
 .rock{
-  background: linear-gradient(hsl(349, 71%, 52%) , hsl(349, 70%, 56%));
+  /* background: linear-gradient(hsl(349, 71%, 52%) , hsl(349, 70%, 56%)); */
   border-radius: 50px;
   grid-column: 6/7;
   grid-row: 2/3;
