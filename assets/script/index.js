@@ -20,7 +20,8 @@
         var houseName;
        item.addEventListener('click',function(){
         //    removing and adding classes
-          hideGamePick.classList.add('hidden');
+        // hideGamePick.setAttribute('class','animate__animated animate__rotateOut')
+         hideGamePick.classList.add('hidden');
           gameDecide.classList.remove('hidden')
 
         //   selecting user choice from array gameData
@@ -44,7 +45,7 @@
             imgHouse.setAttribute('class',gameData[`${rand}`].class)
 
             decideWinner(name,houseName)
-          }, 2000);
+          }, 1500);
       })
     
    })
@@ -61,7 +62,9 @@
 
 //Play Button to Toggle Rules
     playButton.addEventListener('click', function () {
-      hideGamePick.classList.remove('hidden')
+    //   hideGamePick.classList.remove('hidden')
+      hideGamePick.setAttribute('class','game--pick animate__animated animate__rotateIn')
+
       gameDecide.classList.add('hidden')
     })
 
@@ -122,7 +125,7 @@
 
             }else if(user === comp){
                 announce.innerHTML = `Draw`
-                playAgain.setAttribute('class','button draw')
+                playAgain.setAttribute('class','button draw ')
             }
          }
      }
