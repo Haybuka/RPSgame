@@ -124,7 +124,7 @@ body {
 
 /* <========  MAIN =========> */
 main{
-  width: 40rem;
+  width: 50rem;
   left: 50%;
   transform: translateX(-50%);
   position: relative;
@@ -199,17 +199,26 @@ main{
 
 /* Game Pick : Paper*/
 .paper{
-  border-radius: 5rem;
+  border-radius: 10rem;
   grid-column: 1/4;
   grid-row: 1/2;
   transform:translate(3rem,-2rem);
+  border: 1rem solid hsl(230, 89%, 65%);
+  width: 13rem;
+  height: 13.5rem;
+  z-index: 1;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .paper--img{
-  border-radius: 5rem;
-  padding: 1.5rem 2rem;
-  border: 10px solid  var(--paper-color);
+  border-radius: 10rem;
+  padding: 2.5rem 3rem;
+  border: 1rem solid  var(--paper-color);
   background-color: var(--white-bkg);
-  box-shadow: .1rem .3rem .3rem var(--game-shadow);
+  box-shadow: .3rem .6rem .8rem var(--game-shadow);
+  z-index: -1;
   cursor:pointer;
 }
 
@@ -218,35 +227,50 @@ main{
 */
 
 .scissors{
-  border-radius: 5rem;
+  border-radius: 10rem;
   grid-column: 10/13;
   grid-row: 1/2;
   transform: translate(-7rem,-2rem);
+  border: 1rem solid  hsl(40, 84%, 53%);
+  width: 13rem;
+  height: 13.5rem;
+  z-index: 1;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .scissors--img{
-  border-radius: 5rem;
-  padding: 1.5rem 2rem;
+  border-radius: 10rem;
+  padding: 2.5rem 3rem;
   border: 1rem solid var(--scissors-color);
   background-color: var(--white-bkg);
-  box-shadow: .1rem .3rem .3rem var(--game-shadow);
+  box-shadow: .3rem .6rem .6rem var(--game-shadow);
   cursor:pointer;
+  z-index: -1;
 }
 
 /* Game Pick : Rock */
 .rock{
-  border-radius: 5rem;
+  border-radius: 10rem;
   grid-column: 6/7;
   grid-row: 2/3;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1rem solid  hsl(349, 70%, 56%);
+  width: 13rem;
+  height: 13.5rem;
+  z-index: 1;
+  padding-bottom: .5rem;
 }
 .rock--img{
-  border-radius: 5rem;
-  padding: 1.8rem 2rem;
-  border: 1rem solid  var(--rock-color);
+  z-index: -1;
+  border-radius: 10rem;
+  padding: 3rem 3rem;
+  border: 1rem solid  var(--rock-color) ;
   background-color: var(--white-bkg);
-  box-shadow: .1rem .3rem .3rem var(--game-shadow);
+  box-shadow: .3rem .6rem .6rem var(--game-shadow);
   cursor:pointer;
 }
 
@@ -366,7 +390,45 @@ main{
   background-size: contain;
   background-repeat: repeat-x;
 }
+
+/* The class for js names have a translate property,which without grid,
+acts differntly,in other to treat that, new classes were made without them(translate) */
+
+.paper--picked{
+  border-radius: 10rem;
+  border: 1rem solid hsl(230, 89%, 65%);
+  width: 13rem;
+  height: 13.5rem;
+  z-index: 1;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.scissors--picked{
+  border-radius: 10rem;
+  border: 1rem solid  hsl(40, 84%, 53%);
+  width: 13rem;
+  height: 13.5rem;
+  z-index: 1;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* Media Rules and Responsiveness */
+@media screen and (max-width: 500px) {
+ main{
+   width: 100vw;
+   /* width: 40rem; */
+ }
+ .rule--button{
+  display: grid;
+justify-content: center;
+align-self: start;
+transform: translate(20rem,35rem) !important;
+}
+}
     @media screen and (max-width: 400px) {
       .rules {
         height: 70vh;

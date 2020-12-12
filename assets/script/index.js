@@ -30,6 +30,8 @@
             if(this.id == gameData[i].name){      
                 imgUser.setAttribute('src',gameData[i].img)
                 imgUser.setAttribute('class',gameData[i].class)
+                 imgUser.parentElement.setAttribute('class',gameData[i].parentClass)
+
             }
         }
 
@@ -43,7 +45,7 @@
             houseName = gameData[`${rand}`].name
             imgHouse.setAttribute('src',gameData[`${rand}`].img)
             imgHouse.setAttribute('class',gameData[`${rand}`].class)
-
+            imgHouse.parentElement.setAttribute('class',gameData[`${rand}`].parentClass)
             decideWinner(name,houseName)
           }, 1500);
       })
@@ -77,7 +79,8 @@
             count:2,
             paper : 1,
             rock:3,
-            scissor:2
+            scissor:2,
+            parentClass:'scissors--picked'
            },
            {
             name : "paper",
@@ -86,7 +89,8 @@
             count:2,
             rock:1,
             scissor:3,
-            paper:2
+            paper:2,
+            parentClass:'paper--picked'
            },
            {
             name : "rock",
@@ -95,7 +99,8 @@
             count:2,
             scissor:1,
             paper:3,
-            rock:2
+            rock:2,
+            parentClass:'rock'
            }
     ]
 
