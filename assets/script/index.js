@@ -11,9 +11,10 @@
     let imgHouse = document.querySelector('#pickB')
     let announce = document.querySelector('.announce')
     let playAgain = document.querySelector('#play--again')
-    
+    let gameCount = document.querySelector('.count--score');
     let gameItem = [paper,scissors,rock];
-
+    let counting = 10;
+    
 //   iterating over game Item to determine choice
     gameItem.forEach( function(item){
         var name;
@@ -124,10 +125,13 @@
             if(user > comp){
                 announce.innerHTML = `you win`
                 playAgain.classList.add ('win')
+                counting++;
+                    gameCount.innerHTML = counting;
             }else if(user < comp){
                 announce.innerHTML = `you lose`
                 playAgain.classList.add ('lose')
-
+                counting--;
+                gameCount.innerHTML = counting;
             }else if(user === comp){
                 announce.innerHTML = `Draw`
                 playAgain.setAttribute('class','button draw ')

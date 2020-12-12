@@ -158,7 +158,7 @@ main{
  margin-bottom: 0;
  color: var(--score-color);
 }
-.header--score h2{
+.header--score .count--score{
  margin-top: .5rem;
  color: var(--dark-text);
  font-size: 3rem;
