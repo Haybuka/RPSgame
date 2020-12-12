@@ -300,7 +300,9 @@ main{
   position: relative;
   box-shadow: 2px 4px 3px var(--dark-shadow);
   text-transform: uppercase;
-  color: var(--scissors-color);
+}
+.draw{
+  color: var(--scissors-color) !important;
 }
 
 

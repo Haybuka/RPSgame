@@ -104,6 +104,7 @@
     function imageBlank(){
         imgHouse.setAttribute('class','house--blank')
         imgHouse.setAttribute('src','assets/images/house.png')
+        playAgain.setAttribute('class','button')
         announce.innerHTML = ' '
     }
 
@@ -121,7 +122,7 @@
 
             }else if(user === comp){
                 announce.innerHTML = `Draw`
-                playAgain.setAttribute('class','button')
+                playAgain.setAttribute('class','button draw')
             }
          }
      }
