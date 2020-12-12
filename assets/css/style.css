@@ -90,6 +90,9 @@ body {
   grid-column: 1/6;
   grid-row: 1/2;
   text-align: left;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--dark-text);
 }
 .img-close {
   cursor: pointer;
