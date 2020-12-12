@@ -9,6 +9,9 @@
     let rock = document.querySelector('.rock--img')
     let imgUser = document.querySelector('#pickA')
     let imgHouse = document.querySelector('#pickB')
+    let announce = document.querySelector('.announce')
+    let playAgain = document.querySelector('#play--again')
+    
     let gameItem = [paper,scissors,rock];
 
 //   iterating over game Item to determine choice
@@ -67,17 +70,29 @@
         {
             name : "scissor",
             img : "assets/images/icon-scissors.svg",
-            class:"scissors--img"
+            class:"scissors--img",
+            count:2,
+            paper : 1,
+            rock:3,
+            scissor:2
            },
            {
             name : "paper",
             img : "assets/images/icon-paper.svg",
-            class : "paper--img"
+            class : "paper--img",
+            count:2,
+            rock:1,
+            scissor:3,
+            paper:2
            },
            {
             name : "rock",
             img : "assets/images/icon-rock.svg",
-            class:"rock--img"
+            class:"rock--img",
+            count:2,
+            scissor:1,
+            paper:3,
+            rock:2
            }
     ]
 
@@ -89,8 +104,25 @@
     function imageBlank(){
         imgHouse.setAttribute('class','house--blank')
         imgHouse.setAttribute('src','assets/images/house.png')
+        announce.innerHTML = ' '
     }
 
     function decideWinner(name,houseName){
-     console.log(name,houseName)
-    }
+     for(let i=0; i<gameData.length; i++){
+        let user = gameData[i].count;
+        let comp =gameData[i][houseName];
+         if(gameData[i].name == name){
+            if(user > comp){
+                announce.innerHTML = `you win`
+                playAgain.classList.add ('win')
+            }else if(user < comp){
+                announce.innerHTML = `you lose`
+                playAgain.classList.add ('lose')
+
+            }else if(user === comp){
+                announce.innerHTML = `Draw`
+                playAgain.setAttribute('class','button')
+            }
+         }
+     }
+}
