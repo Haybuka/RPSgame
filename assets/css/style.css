@@ -484,7 +484,7 @@ acts differntly,in other to treat that, new classes were made without them(trans
   display: grid;
 justify-content: center;
 align-self: start;
-transform: translate(20rem,60rem) !important;
+transform: translate(20rem,80rem) !important;
 }
 .game--compare div:nth-of-type(1){
   grid-column: 2/3 !important;
