@@ -426,7 +426,7 @@ main{
 }
 .rule--button{
   position: relative;
-  transform: translateY(100rem);
+  transform: translateY(50rem);
   width: 10rem;
   margin: 0 auto;
 }
