@@ -7,7 +7,7 @@
     let paper = document.querySelector('.paper--img')
     let scissors = document.querySelector('.scissors--img')
     let rock = document.querySelector('.rock--img')
-    let imgUser = document.querySelector('#pickA')
+    let imgUser = document.querySelector('#pickA') 
     let imgHouse = document.querySelector('#pickB')
     let announce = document.querySelector('.announce')
     let playAgain = document.querySelector('#play--again')

@@ -5,15 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
   <link rel="stylesheet" href="assets/css/style.css">
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
-
-
-
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-
 </head>
 
 <body>
@@ -46,31 +42,38 @@
       <!-- Game Picker for Selection,Position absolute to Game Body -->
       <div class="game--pick">
         <div class="paper">
-          <img src="assets/images/icon-paper.svg" alt="" class="paper--img" id="paper">
+          <img src="assets/images/icon-paper.svg" alt="paper" class="paper--img" id="paper">
         </div>
         <div class="scissors">
-          <img src="assets/images/icon-scissors.svg" alt="" class="scissors--img" id="scissor">
+          <img src="assets/images/icon-scissors.svg" alt="scissors" class="scissors--img" id="scissor">
         </div>
         <div class="rock">
-          <img src="assets/images/icon-rock.svg" alt="" class="rock--img" id="rock">
+          <img src="assets/images/icon-rock.svg" alt="rock" class="rock--img" id="rock">
         </div>
       </div>
       <!-- Game Decider,Position absolute to Game Body -->
       <div class="game--decide hidden">
-        <div class="pick">
+        <!-- <div class="pick">
           <p>You Picked</p>
           <p>The House Picked</p>
-        </div>
+        </div> -->
         <div class="game--compare">
           <div>
-            <img alt="you choose" class=" " id="pickA">
+            <p>You Picked</p>
+            <div>
+              <img alt="you choose" class=" " id="pickA">
+            </div>
           </div>
           <div>
             <h3 class="announce"> you win</h3>
             <p class="button" id="play--again"> play again</p>
           </div>
           <div>
-            <img src="assets/images/house.png" alt="house chooses" class="house--blank" id="pickB">
+
+            <p>The House Picked</p>
+            <div>
+              <img src="assets/images/house.png" alt="house chooses" class="house--blank" id="pickB">
+            </div>
             <!-- 
             rock--img -->
           </div>
