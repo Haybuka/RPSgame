@@ -13,7 +13,8 @@
     let playAgain = document.querySelector('#play--again')
     let gameCount = document.querySelector('.count--score');
     let gameItem = [paper,scissors,rock];
-    let counting = 10;
+    localStorage.setItem('count',10);
+    let counting = Number(localStorage.getItem('count'));
     
 //   iterating over game Item to determine choice
     gameItem.forEach( function(item){

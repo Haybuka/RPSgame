@@ -61,9 +61,10 @@ body {
   position: absolute;
   width: 35rem;
   height: auto;
-  top: 50%;
+  /* top: 50%;*/
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%); 
+  margin: 15rem auto;
   background-color:var(--white-bkg);
   padding: 2rem;
   border-radius: 1rem;
@@ -128,9 +129,7 @@ body {
 /* <========  MAIN =========> */
 main{
   width: 50rem;
-  left: 50%;
-  transform: translateX(-50%);
-  position: relative;
+ margin: 1rem auto;
   padding: 1rem;
 }
 
