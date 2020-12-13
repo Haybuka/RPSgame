@@ -491,13 +491,14 @@ transform: translate(20rem,45rem) !important;
   grid-row: 1/2 !important;
 }
 .game--compare div:nth-of-type(2){
-  /* grid-column: 3/8 !important; */
+  grid-column: 3/9 !important;
   margin-top: 3rem;
   grid-row: 2/3 !important;
+  transform: translateX(-2rem);
 }
 .game--compare div:nth-of-type(3){
   grid-column: 7/10 !important;
-  /* transform: translateX(-2rem); */
+  transform: translateX(-1.5rem);
 }
 .game--compare div:nth-of-type(1) > p{
   grid-row: 3/4;
