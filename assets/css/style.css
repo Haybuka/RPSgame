@@ -426,8 +426,10 @@ main{
   display: none !important;
 }
 .rule--button{
-  position: absolute;
-  transform: translate(100rem,35rem);
+  position: relative;
+  transform: translateY(100rem);
+  width: 10rem;
+  margin: 0 auto;
 }
 .house--blank{
   border-radius: 5rem ;
@@ -483,8 +485,7 @@ acts differntly,in other to treat that, new classes were made without them(trans
  .rule--button{
   display: grid;
 justify-content: center;
-align-self: start;
-transform: translate(20rem,80rem) !important;
+transform: translate(19rem,50rem) !important;
 }
 .game--compare div:nth-of-type(1){
   grid-column: 2/3 !important;
@@ -538,12 +539,12 @@ transform: translate(20rem,80rem) !important;
         grid-column: 1/13;
         grid-row: 2/3;
       }
-      .rule--button{
+      /* .rule--button{
         display: grid;
   justify-content: center;
   align-self: start;
   transform: translate(16rem,35rem) !important;
-      }
+      } */
     }
  
 
