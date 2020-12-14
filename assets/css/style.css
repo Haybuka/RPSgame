@@ -61,7 +61,6 @@ body {
   position: absolute;
   width: 35rem;
   height: auto;
-  /* top: 50%;*/
   left: 50%;
   transform: translateX(-50%); 
   margin: 15rem auto;
@@ -157,7 +156,8 @@ main{
  margin-bottom: 0;
  color: var(--score-color);
  text-transform: uppercase;
- font-weight: bold;transform: translateY(1rem);
+ font-weight: bold;
+ transform: translateY(.6rem);
 }
 .header--score .count--score{
  margin-top: .1rem;
@@ -302,10 +302,7 @@ z-index: -1;
   height: 0% ;
   display: none;
 }
-/* .scissors:active::before{
-  height: 0% !important;
-  display: none;
-} */
+
 .rock::after{
   content: '';
   position: absolute;
@@ -380,7 +377,6 @@ z-index: -1;
   grid-template-columns: repeat(12,1fr);
   grid-template-rows: repeat(2,auto);
   margin-top: 3rem;
-  /* transform: translateX(-2rem); */
 }
 .game--compare div:nth-of-type(1) > p{
   grid-row: 1/2;
@@ -419,7 +415,6 @@ z-index: -1;
   letter-spacing: .1rem;
 }
 .game--compare div:nth-of-type(3) > img{
-  /* grid-column: 9/12 !important; */
   grid-row: 2/3 !important;
   transform: translateY(-1rem);
 
@@ -571,7 +566,6 @@ z-index: -1;
 @media screen and (max-width: 500px) {
  main{
    width: 100vw;
-   /* width: 40rem; */
  }
  .rule--button{
   display: grid;
@@ -626,16 +620,10 @@ transform: translate(1rem,50rem) !important;
       }
 
       .rules-img {
-
         grid-column: 1/13;
         grid-row: 2/3;
       }
-      /* .rule--button{
-        display: grid;
-  justify-content: center;
-  align-self: start;
-  transform: translate(16rem,35rem) !important;
-      } */
+     
     }
  
 
