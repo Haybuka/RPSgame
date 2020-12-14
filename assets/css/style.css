@@ -159,6 +159,7 @@ main{
  text-transform: uppercase;
  font-weight: bold;
  transform: translateY(.6rem);
+ letter-spacing: .2rem;
 }
 .header--score .count--score{
  margin-top: .1rem;
@@ -439,7 +440,7 @@ z-index: -1;
   position: relative;
   box-shadow: .2rem .4rem .3rem var(--dark-shadow);
   text-transform: uppercase;
-
+  letter-spacing: .2rem;
 }
 .draw{
   color: var(--scissors-color) !important;
