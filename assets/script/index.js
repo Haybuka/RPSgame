@@ -13,7 +13,7 @@
     let playAgain = document.querySelector('#play--again')
     let gameCount = document.querySelector('.count--score');
     let gameItem = [paper,scissors,rock];
-    let counting = 10;
+    let counting = 0;
     
 //   iterating over game Item to determine choice
     gameItem.forEach( function(item){
@@ -21,11 +21,11 @@
         var houseName;
        item.addEventListener('click',function(){
         //    removing and adding classes
-        // hideGamePick.setAttribute('class','animate__animated animate__rotateOut')
+          // hideGamePick.setAttribute('class','animate__animated animate__rotateOut')
          hideGamePick.classList.add('hidden');
           gameDecide.classList.remove('hidden')
 
-        //   selecting user choice from array gameData
+          //   selecting user choice from array gameData
           for(let i=0;i<gameData.length; i++){
             name = this.id;
             if(this.id == gameData[i].name){      
